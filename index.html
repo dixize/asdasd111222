@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ростелеком | Проектный офис промышленной автоматизации</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="hero-wrapper">
+        <div class="container">
+            <header class="header">
+                <div class="header-titles">
+                    <span class="brand">Ростелеком</span>
+                    <span class="office">ПРОЕКТНЫЙ ОФИС</span>
+                </div>
+            </header>
+
+            <section class="hero-main">
+                <h1 class="animate__animated animate__fadeInLeft">Цифровая территория</h1>
+                <p class="animate__animated animate__fadeInLeft">Создание единой технологической среды: от частных сетей связи LTE до роботизированных производственных линий. Гарантируем технологический суверенитет и рост операционной эффективности.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">Решения по направлениям</button>
+                    <button class="btn-secondary" onclick="document.getElementById('territory').scrollIntoView({behavior: 'smooth'})">Архитектура территории</button>
+                </div>
+            </section>
+
+            <nav id="catalog" class="main-nav">
+                <div class="nav-card" onclick="openSlide('robotics')"><h3>Роботизация</h3></div>
+                <div class="nav-card" onclick="openSlide('quality')"><h3>Контроль качества</h3></div>
+                <div class="nav-card" onclick="openSlide('security')"><h3>Средства охраны</h3></div>
+                <div class="nav-card" onclick="openSlide('eco')"><h3>Экомониторинг</h3></div>
+                <div class="nav-card" onclick="openSlide('equipment')"><h3>Тех. оборудование</h3></div>
+            </nav>
+        </div>
+    </main>
+
+    <section id="territory" class="territory-deep">
+        <div class="container">
+            <h2 class="section-label">Единая экосистема</h2>
+            <h3 class="section-title">Цифровая Территория: Технологический стек</h3>
+            
+            <div class="t-grid">
+                <div class="t-card">
+                    <h4>Private LTE / 5G</h4>
+                    <p>Выделенная беспроводная сеть связи для промышленных объектов. Обеспечивает бесперебойную передачу данных в шахтах, на разрезах и в цехах с высокой плотностью оборудования. Изолированный контур гарантирует безопасность данных и минимальный пинг для беспилотного транспорта.</p>
+                </div>
+                <div class="t-card">
+                    <h4>Индустриальный IoT</h4>
+                    <p>Система предиктивной аналитики на базе тысяч датчиков. Сбор данных о вибрации, температуре и токах потребления позволяет переходить от планового ремонта к ремонту по состоянию, исключая внезапные простои критических узлов.</p>
+                </div>
+                <div class="t-card">
+                    <h4>Видеоаналитика и нейросети</h4>
+                    <p>Автоматизированный контроль соблюдения ТБ, ношения СИЗ и нахождения персонала в опасных зонах. Интеллектуальный поиск дефектов продукции в потоке и распознавание лиц для бесшовного управления доступом (СКУД).</p>
+                </div>
+                <div class="t-card">
+                    <h4>Инфраструктура и КИИ</h4>
+                    <p>Защита объектов критической информационной инфраструктуры в соответствии с ФЗ-187. Построение доверенных ЦОД, импортозамещение серверного ПО и криптографическая защита каналов передачи данных по ГОСТ.</p>
+                </div>
+                <div class="t-card">
+                    <h4>Цифровой двойник предприятия</h4>
+                    <p>3D-моделирование производственных процессов в реальном времени. Позволяет моделировать изменения в техпроцессах без остановки производства и проводить обучение персонала на виртуальных тренажерах.</p>
+                </div>
+                <div class="t-card">
+                    <h4>Умное освещение и микроклимат</h4>
+                    <p>Энергосервисные контракты: автоматическое управление освещением и отоплением цехов в зависимости от присутствия людей и времени суток. Снижение затрат на энергоресурсы до 40%.</p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-wrap">
+            <button class="close-btn" onclick="closeSlide()">✕ ЗАКРЫТЬ</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
